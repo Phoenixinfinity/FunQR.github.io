@@ -48,7 +48,7 @@ body {
     font-size: 30px;
 }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 320px) {
     .heading {
         text-align: center;
         font-weight: 500px;
