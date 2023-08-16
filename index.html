@@ -1,24 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QR FUN</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="heading">
-        <h1>!!! OOPS !!!</h1>
+    <div class="card">
+        <img src="./birthday.svg" alt="birthday" class="birthday">
+        <div class="text">
+            <h1>OOPS!</h1>
+            <p>ERROR 404</p>
+            <p class="muted">Chocolate was the only Suprise....🤣 🤣 🤣 </p>
+            <p>🥳 HAPY BIRTHDAY 🥳</p>
+        </div>
+        <div class="space"></div>
     </div>
-    <div class="head-2">
-        <h3>ERROR 404</h3>
-    </div>
-    <div class="image">
-        <img src="emoji.png" alt="">
-    </div>
-    <div class="content">
-        <h5>The Surprise is the Chocolate ONLY..........</h5>
-        <p>WAIT !!!!!!...... UNTIL SATURDAY FOR THE BIG ONE.....</p>
-    </div>
+    <!-- Confetti  JS-->
+    <script src="confitee.js"></script>
+    <script>
+
+        // start
+
+        const start = () => {
+            setTimeout(function () {
+                confetti.start()
+            }, 1000); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
+        };
+
+        //  Stop
+
+        const stop = () => {
+            setTimeout(function () {
+                confetti.stop()
+            }, 5000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
+        };
+
+        start();
+        stop();
+    </script>
 </body>
+
 </html>

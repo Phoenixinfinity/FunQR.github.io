@@ -1,90 +1,65 @@
 * {
-    padding: 0;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  body {
+    background: #008888;
+    display: grid;
+    place-items: center;
+    height: 100vh;
     margin: 0;
-    box-sizing: border-box;
-}
-
-body {
-    background-color: rgb(247, 196, 121);
-}
-
-.heading {
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .card {
+    background: #fdfdfd;
+    border-radius: 4px;
+    height: 85vh;
+    width: 80vw;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     text-align: center;
-    font-weight: 800px;
-    font-size: 60px;
-    margin: 40px;
-    color: red;
-}
-
-.head-2 {
-    text-align: center;
-    font-weight: 800px;
-    font-size: 50px;
-    margin: 25px;
-    color: rgb(112, 9, 9);
-}
-
-.image {
-    width: 180px;
-    height: 180px;
-    margin: 0px auto 0.2em auto;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.image img {
-    width: 300px;
-    position: relative;
-    right: 70px;
-}
-
-.content {
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-}
-
-.content h5 {
-    font-size: 30px;
-}
-
-@media only screen and (max-width: 320px) {
-    .heading {
-        text-align: center;
-        font-weight: 500px;
-        font-size: 25px;
-        margin: 40px;
-        color: red;
-        padding-top: 50px;
+    padding: 1em;
+    overflow: hidden;
+  }
+  
+  @media only screen and (min-width: 1000px) {
+    .card {
+      flex-direction: row-reverse;
     }
-    .head-2 {
-        text-align: center;
-        font-weight: 800px;
-        font-size: 30px;
-        margin: 25px;
-        color: rgb(112, 9, 9);
+    .card img.birthday {
+      width: 100%;
+      max-width: 50vw;
+      max-height: unset;
     }
-    .image {
-        width: 140px;
-        height: 140px;
-        margin: 0px auto 0.1em auto;
-        justify-content: center;
-        align-items: center;
+  }
+  
+  @media only screen and (max-height: 640px) {
+    .card {
+      flex-direction: row-reverse;
     }
-    
-    .image img {
-        width: 200px;
-        position: relative;
-        right: 30px;
+    .card img.birthday {
+      width: 100%;
+      max-width: 50vw;
+      max-height: unset;
     }
-    
-    .content {
-        align-items: center;
-        text-align: center;
-        justify-content: center;
-    }
-    
-    .content h5 {
-        font-size: 25px;
-    }
-}
+  }
+  
+  img.birthday {
+    max-height: 40vh;
+  }
+  
+  .text {
+    padding: 1em;
+  }
+  
+  .muted {
+    opacity: 0.8;
+  }
+  
+  .space {
+    height: 100px;
+  }
